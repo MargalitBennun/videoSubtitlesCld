@@ -2,7 +2,7 @@ import STATICS from './consts/statics';
 import TEMPLATES from './consts/templates';
 import loadJSON from './utils/utils';
 
-class VideoSubtitles {
+export default class VideoSubtitles {
     constructor() {    }
 
     /**
@@ -101,5 +101,3 @@ class VideoSubtitles {
         return (hours * MINUTES_IN_HOUR * SECONDS_IN_MINUTES) + (minutes * SECONDS_IN_MINUTES) + seconds;
     }
 }
-
-export default VideoSubtitles;
