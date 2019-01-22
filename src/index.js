@@ -1,6 +1,6 @@
-import readFile from 'fs-readfile-promise';
 import STATICS from './consts/statics';
 import TEMPLATES from './consts/templates';
+import loadJSON from './utils/utils';
 
 class VideoSubtitles {
     constructor() {    }
@@ -30,12 +30,19 @@ class VideoSubtitles {
     }
 
     async _readSubtitleJsonFile(fileUrl) {
-        try {
-            const jsonFile = await readFile(fileUrl);
-            return JSON.parse(jsonFile);
-        } catch (ex) {
-            throw new Error('_readSubtitleJsonFile: Cannot read JSON file: ' + ex.message);
-        }
+        return new Promise((resolve, reject) => {
+            try {
+                loadJSON(fileUrl)
+                    .then((json) => {
+                        resolve(json);
+                        })
+                    .catch((err)=>{
+                        reject(err);
+                        });
+            } catch (ex) {
+                throw new Error('_readSubtitleJsonFile: Cannot read JSON file: ' + ex.message);
+            }
+        });
     }
     /**
      * Get URL for video with subtitles
