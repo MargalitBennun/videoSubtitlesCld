@@ -102,6 +102,4 @@ class VideoSubtitles {
     }
 }
 
-const videoSubtitles = new VideoSubtitles();
-
-export { videoSubtitles };
+export default VideoSubtitles;
