@@ -6,7 +6,7 @@ class VideoSubtitles {
     constructor() {    }
 
     /**
-     *
+     * Add subtitles to video. Using Cloudinary text overlay API.
      * @param conf {Object} - subtitles configuration
      * @param {string} conf.videoPublicId - a String which represents the Cloudinary publicId of the video we want to add subtitles to.
      * @param {string} conf.subtitlesFile - URL to a JSON containing the strings to present and their timing in the video.
@@ -38,7 +38,7 @@ class VideoSubtitles {
         }
     }
     /**
-     *
+     * Get URL for video with subtitles
      * @param conf {Object} - subtitles configuration
      * @param {string} conf.videoPublicId - a String which represents the Cloudinary publicId of the video we want to add subtitles to.
      * @param {JSON} conf.subtitles - JSON with the format of - { Subtitles:[{start-timing, end-timing, text}] }
