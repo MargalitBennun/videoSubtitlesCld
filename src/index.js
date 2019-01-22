@@ -103,6 +103,5 @@ class VideoSubtitles {
 }
 
 const videoSubtitles = new VideoSubtitles();
-const addSubtitlesToVideo = videoSubtitles.addSubtitlesToVideo;
 
-export { addSubtitlesToVideo };
+export { videoSubtitles };
