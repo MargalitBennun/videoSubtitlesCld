@@ -1,0 +1,37 @@
+{
+  "name": "VideoSubtitlesCld",
+  "version": "1.0.0",
+  "description": "Add subtitles to video with cloudinary's API",
+  "main": "index.js",
+  "scripts": {
+    "babel": "babel --presets es2015 js/main.js -o build/main.bundle.js",
+    "start": "http-server",
+    "build": "webpack",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MargalitBennun/videoSubtitlesCld.git"
+  },
+  "keywords": [
+    "cloudinary",
+    "home",
+    "assignment"
+  ],
+  "author": "Megi Chejanovsky",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MargalitBennun/videoSubtitlesCld/issues"
+  },
+  "homepage": "https://github.com/MargalitBennun/videoSubtitlesCld#readme",
+  "dependencies": {
+    "babel-loader": "^8.0.5",
+    "eslint": "^5.12.0",
+    "http-server": "^0.11.1",
+    "webpack": "^4.28.4",
+    "fs-readfile-promise": "^3.0.1"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.2.1"
+  }
+}
