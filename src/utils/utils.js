@@ -23,11 +23,9 @@ const loadJSON = (filepath) => {
             }
         })
     });
-}
+};
 
 
-export {
-    template,
-    loadJSON,
-}
+export { template, loadJSON }
+
 

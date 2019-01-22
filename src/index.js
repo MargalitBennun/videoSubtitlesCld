@@ -1,6 +1,6 @@
 import STATICS from './consts/statics';
 import TEMPLATES from './consts/templates';
-import loadJSON from './utils/utils';
+import { loadJSON } from './utils/utils';
 
 export default class VideoSubtitles {
     constructor() {    }
