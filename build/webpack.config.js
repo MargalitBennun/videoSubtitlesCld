@@ -5,6 +5,8 @@ module.exports = {
     output: {
         filename: 'main.js',
         path: path.resolve(__dirname, '../dist'),
-        library: 'VideoSubtitles',
+        library: 'videoSubtitlesCld',
+        libraryTarget: 'umd',
+        umdNamedDefine: true
     }
 };
