@@ -59,7 +59,7 @@ class VideoSubtitles {
 
         return TEMPLATES.SUBTITLES_URL({
             domain: STATICS.DOMAIN,
-            urlParams: this._convertJsonToUrlParams(conf.subtitles, textStyle, textLocation),
+            urlParams: this._convertJsonToUrlParams(conf.subtitles.subtitles, textStyle, textLocation),
             videoPublicId: conf.videoPublicId,
         });
     }
