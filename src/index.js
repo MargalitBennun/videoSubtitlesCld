@@ -88,19 +88,14 @@ class VideoSubtitles {
      * @returns {*}
      */
     _getSeconds(time) {
-        const MINUTES_IN_HOUR = 60;
         const SECONDS_IN_MINUTES = 60;
 
         let temp = time.split(':');
 
-        const hours = temp[0];
-
-        temp = temp[1].split('.');
-
         const minutes = temp[0];
-        const seconds = parseInt(temp[1], 10);
+        const seconds = parseFloat(temp[1], 10);
 
-        return (hours * MINUTES_IN_HOUR * SECONDS_IN_MINUTES) + (minutes * SECONDS_IN_MINUTES) + seconds;
+        return (minutes * SECONDS_IN_MINUTES) + seconds;
     }
 }
 
