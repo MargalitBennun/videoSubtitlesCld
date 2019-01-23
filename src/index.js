@@ -80,7 +80,7 @@ class VideoSubtitles {
                 location,
             });
         });
-        return subtitlesStrs.join(',');
+        return subtitlesStrs.join('/');
     }
     /**
      * Get string represent time, returns time in seconds.
