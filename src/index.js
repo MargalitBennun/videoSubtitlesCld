@@ -73,7 +73,7 @@ class VideoSubtitles {
     _convertJsonToUrlParams(subtitles, textStyle, location) {
         const subtitlesStrs = subtitles.map((subtitle) => {
             return TEMPLATES.SUBTITLES_PARAMS({
-                text: subtitle.text,
+                text: encodeURIComponent(subtitle.text),
                 startTime: this._getSeconds(subtitle[STATICS.START_TIME_PARAM]),
                 endTime: this._getSeconds(subtitle[STATICS.END_TIME_PARAM]),
                 textStyle,
