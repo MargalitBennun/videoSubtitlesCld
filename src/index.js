@@ -76,8 +76,8 @@ class VideoSubtitles {
                 text: subtitle.text,
                 startTime: this._getSeconds(subtitle[STATICS.START_TIME_PARAM]),
                 endTime: this._getSeconds(subtitle[STATICS.END_TIME_PARAM]),
-                textStyle: textStyle,
-                location: location,
+                textStyle,
+                location,
             });
         });
         return subtitlesStrs.join(',');
