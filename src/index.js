@@ -18,6 +18,7 @@ class VideoSubtitles {
      * @returns {string}
      */
     async addSubtitlesToVideo(conf) {
+        console.log('addSubtitlesToVideo');
         try {
             return new Promise((resolve, reject) => {
                 if(conf.subtitles) {
@@ -36,13 +37,16 @@ class VideoSubtitles {
     }
 
     async _readSubtitleJsonFile(fileUrl) {
+        console.log('_readSubtitleJsonFile');
         return new Promise((resolve, reject) => {
             try {
                 loadJSON(fileUrl)
                     .then((json) => {
+                        console.log('_readSubtitleJsonFile: fetched subtitles', json);
                         resolve(json);
                         })
                     .catch((err)=>{
+                        console.log('_readSubtitleJsonFile: failed to fetch subtitles', err);
                         reject(err);
                         });
             } catch (ex) {
