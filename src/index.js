@@ -19,10 +19,16 @@ class VideoSubtitles {
      */
     async addSubtitlesToVideo(conf) {
         try {
-            const subtitles = conf.subtitles ? conf.subtitles : await this._readSubtitleJsonFile(conf.subtitlesFile);
-            return this._getUrl({
-                subtitles,
-                ...conf
+            return new Promise((resolve, reject) => {
+                if(conf.subtitles) {
+                    resolve(this._getUrl({ subtitles: conf.subtitles, ...conf }));
+                } else {
+                    this._readSubtitleJsonFile(conf.subtitlesFile).then(subtitles => {
+                        resolve(this._getUrl({ subtitles, ...conf }));
+                    }).catch(err => {
+                        reject(err);
+                    });
+                }
             });
         } catch (ex) {
             throw ex;
