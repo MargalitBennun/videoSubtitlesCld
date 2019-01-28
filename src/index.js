@@ -67,17 +67,17 @@ class VideoSubtitles {
      * Get URL Parameters for embedded subtitles
      * @param subtitles {Array} Array of subtitles definition: {start-timing, end-timing, text}
      * @param textStyle {String}
-     * @param location {String}
+     * @param textLocation {String}
      * @returns {*}
      */
-    _convertJsonToUrlParams(subtitles, textStyle, location) {
+    _convertJsonToUrlParams(subtitles, textStyle, textLocation) {
         const subtitlesStrs = subtitles.map((subtitle) => {
             return TEMPLATES.SUBTITLES_PARAMS({
                 text: encodeURIComponent(subtitle.text.replace(',', ';')),
                 startTime: this._getSeconds(subtitle[STATICS.START_TIME_PARAM]),
                 endTime: this._getSeconds(subtitle[STATICS.END_TIME_PARAM]),
                 textStyle,
-                location,
+                textLocation,
             });
         });
         return subtitlesStrs.join('/');
