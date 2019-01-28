@@ -1,6 +1,6 @@
 {
   "name": "VideoSubtitlesCld",
-  "version": "1.0.26",
+  "version": "1.0.27",
   "description": "Add subtitles to video with cloudinary's API",
   "main": "./dist/main.js",
   "scripts": {

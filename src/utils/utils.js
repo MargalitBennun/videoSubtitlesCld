@@ -14,7 +14,7 @@ const loadJSON = (filepath) => {
         fetch(filepath, {
             method: 'get'
         }).then(function (response) {
-            resolve(response);
+            resolve(response.json());
         }).catch(function (err) {
             reject(err);
         });
